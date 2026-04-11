@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search, ArrowRight } from "lucide-react";
+import searchIllustration from "@/assets/search-illustration.png";
 
 const searchablePages = [
   { label: "Personal Loan", href: "/personal-loan", category: "Loans" },
@@ -101,6 +102,11 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
         </div>
 
         {/* Results or Quick Links */}
+        {query.length === 0 && (
+          <div className="flex justify-center mb-6">
+            <img src={searchIllustration} alt="Search" className="w-40 h-40 opacity-60" loading="lazy" width={160} height={160} />
+          </div>
+        )}
         {query.length > 0 ? (
           <div className="space-y-1 max-h-[50vh] overflow-y-auto">
             {filtered.length > 0 ? (
