@@ -106,7 +106,7 @@ const Navbar = () => {
             ) : (
               <>
                 <button
-                  onClick={() => navigate("/login")}
+                  onClick={() => navigate("/login?mode=signup")}
                   className="hidden sm:inline-flex px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
                 >
                   Get Started
@@ -160,7 +160,7 @@ const Navbar = () => {
                 </button>
               ) : (
                 <>
-                  <button onClick={() => navigate("/login")} className="flex-1 px-4 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
+                  <button onClick={() => navigate("/login?mode=signup")} className="flex-1 px-4 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
                     Get Started
                   </button>
                   <button onClick={() => navigate("/login")} className="flex-1 px-4 py-2.5 rounded-full border border-border text-foreground text-sm font-medium">
