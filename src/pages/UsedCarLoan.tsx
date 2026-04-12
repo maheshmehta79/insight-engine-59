@@ -130,6 +130,7 @@ const faqs = [
 ];
 
 const UsedCarLoan = () => {
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
     Features: useRef<HTMLDivElement>(null),

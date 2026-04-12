@@ -129,6 +129,7 @@ const faqs = [
 ];
 
 const GoldLoan = () => {
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
     Features: useRef<HTMLDivElement>(null),
@@ -242,6 +243,9 @@ const GoldLoan = () => {
       <div className="flex gap-8 pb-16">
         {/* Main Content */}
         <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Gold Loan" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
           {/* About Section */}
           <div ref={sectionRefs.About} className="scroll-mt-24 mb-10">
             <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
@@ -451,6 +455,8 @@ const GoldLoan = () => {
           eligibilityDocs={goldLoanDetails}
           ctaIcon={Gem}
           ctaDescription="Compare offers from 30+ lenders and get the best rates for your gold."
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
           extraSections={[{
             title: "Invest in Gold",
             items: investInGold,
