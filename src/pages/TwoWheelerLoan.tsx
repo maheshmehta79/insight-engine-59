@@ -205,6 +205,12 @@ const TwoWheelerLoan = () => {
         </div>
       </section>
 
+      {/* Main Content + Sidebar Layout */}
+      <div className="flex gap-8">
+        <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Two Wheeler Loan" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
       {/* About Section */}
       <div ref={sectionRefs.About} className="scroll-mt-32">
         <section className="py-8">
@@ -441,6 +447,20 @@ const TwoWheelerLoan = () => {
             ))}
           </div>
         </section>
+      </div>
+        </div>
+
+        <ProductSidebar
+          productName="Two Wheeler Loan"
+          insights={["Electric Two Wheeler Loan – A Complete Guide", "0% Down Payment Two Wheeler Loans"]}
+          topLenders={["HDFC Two Wheeler Loan", "SBI Two Wheeler Loan", "Hero FinCorp Two Wheeler Loan"]}
+          interestRates={["HDFC Two Wheeler Loan Rate", "SBI Two Wheeler Loan Rate"]}
+          eligibilityDocs={["How to Apply?", "EMI Calculator", "Eligibility & Documents"]}
+          ctaIcon={Bike}
+          ctaDescription="Compare two wheeler loan offers from top lenders."
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
+        />
       </div>
 
       <Footer />
