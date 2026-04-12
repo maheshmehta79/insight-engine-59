@@ -953,6 +953,457 @@ const creditCardsData: ProductSidebarData = {
   ]
 };
 
+const educationLoanData: ProductSidebarData = {
+  lenders: [
+    {
+      name: "SBI Education Loan",
+      slug: "sbi-education-loan",
+      interestRate: "8.15% – 10.00% p.a.",
+      processingFee: "Nil",
+      maxAmount: "₹1.5 Crore (Abroad), ₹20 Lakh (India)",
+      tenure: "Up to 15 years",
+      eligibility: [
+        "Indian national with confirmed admission in recognized institution",
+        "Age: No upper limit (co-applicant required)",
+        "Collateral required for loans above ₹7.5 Lakh",
+        "Co-applicant (parent/guardian) mandatory"
+      ],
+      documents: [
+        "Admission letter from institution",
+        "Mark sheets of qualifying exams (10th, 12th, Graduation)",
+        "KYC documents of student and co-applicant",
+        "Income proof of co-applicant",
+        "Collateral documents (for loans above ₹7.5 Lakh)",
+        "Cost of study certificate from institution"
+      ],
+      features: [
+        "No processing fee charged",
+        "Repayment begins 1 year after course completion or 6 months after getting a job",
+        "Covers tuition, hostel, books, travel & equipment",
+        "Interest subsidy for economically weaker sections under CSIS",
+        "Available for courses in India and abroad"
+      ],
+      description: "SBI Scholar Loan Scheme offers education loans at competitive rates with moratorium period and flexible repayment. It covers both domestic and international studies."
+    },
+    {
+      name: "HDFC Credila Education Loan",
+      slug: "hdfc-credila-education-loan",
+      interestRate: "9.00% – 11.50% p.a.",
+      processingFee: "1% of loan amount",
+      maxAmount: "₹2 Crore (Abroad), ₹50 Lakh (India)",
+      tenure: "Up to 15 years",
+      eligibility: [
+        "Indian national with confirmed admission",
+        "Course should be from recognized university",
+        "Co-applicant required (parent/guardian/spouse)",
+        "Collateral may be required for higher loan amounts"
+      ],
+      documents: [
+        "Admission letter / Offer letter",
+        "Academic transcripts",
+        "KYC of student and co-applicant",
+        "Income documents of co-applicant",
+        "Property documents (if collateral required)",
+        "Passport & Visa (for abroad studies)"
+      ],
+      features: [
+        "Specialized education loan NBFC with deep expertise",
+        "Covers 100% of tuition and living expenses",
+        "Quick sanction within 3-5 working days",
+        "No prepayment/foreclosure charges",
+        "Dedicated relationship manager for each student"
+      ],
+      description: "HDFC Credila is India's leading dedicated education loan provider offering customized solutions for students pursuing higher education in India and abroad."
+    },
+    {
+      name: "Axis Bank Education Loan",
+      slug: "axis-bank-education-loan",
+      interestRate: "9.70% – 13.70% p.a.",
+      processingFee: "Up to 1% + GST",
+      maxAmount: "₹75 Lakh (Abroad), ₹10 Lakh (India)",
+      tenure: "Up to 15 years",
+      eligibility: [
+        "Indian citizen with admission in recognized institution",
+        "Age: 18 years and above",
+        "Co-applicant (parent/guardian) mandatory",
+        "Good academic record preferred"
+      ],
+      documents: [
+        "Admission letter from university",
+        "Academic records (10th, 12th, Graduation)",
+        "KYC documents of student and co-applicant",
+        "Income proof of co-applicant",
+        "Cost of attendance breakdown",
+        "Passport copy (for abroad)"
+      ],
+      features: [
+        "100% financing of tuition fees",
+        "Moratorium period: Course duration + 6 months",
+        "Tax benefits under Section 80E",
+        "Online application and tracking",
+        "Covers pre-departure expenses"
+      ],
+      description: "Axis Bank education loans support students pursuing professional and technical courses at top institutions in India and abroad with flexible repayment."
+    },
+    {
+      name: "Bank of Baroda Education Loan",
+      slug: "bob-education-loan",
+      interestRate: "8.30% – 9.85% p.a.",
+      processingFee: "Nil",
+      maxAmount: "₹1 Crore (Abroad), ₹40 Lakh (India)",
+      tenure: "Up to 15 years",
+      eligibility: [
+        "Indian national with confirmed admission",
+        "Secured admission in recognized institution in India or abroad",
+        "Co-applicant required",
+        "Collateral for loans above ₹4 Lakh"
+      ],
+      documents: [
+        "Admission confirmation letter",
+        "Mark sheets of last qualifying exam",
+        "KYC documents",
+        "Income proof of co-applicant",
+        "Fee structure from institution",
+        "Collateral documents if applicable"
+      ],
+      features: [
+        "Among the lowest interest rates in the market",
+        "No processing fee",
+        "Covers tuition, books, travel, and living expenses",
+        "Concession of 0.50% for girl students",
+        "Interest subsidy under government schemes"
+      ],
+      description: "Bank of Baroda Baroda Scholar Loan offers competitive interest rates and comprehensive coverage for students pursuing higher education."
+    },
+    {
+      name: "IDFC FIRST Education Loan",
+      slug: "idfc-first-education-loan",
+      interestRate: "9.00% – 12.00% p.a.",
+      processingFee: "Up to 1% + GST",
+      maxAmount: "₹1 Crore",
+      tenure: "Up to 12 years",
+      eligibility: [
+        "Indian citizen aged 18+ with confirmed admission",
+        "Admission in premier institution in India or abroad",
+        "Co-applicant required",
+        "Minimum academic score criteria may apply"
+      ],
+      documents: [
+        "University admission letter",
+        "Academic transcripts",
+        "Student and co-applicant KYC",
+        "Co-applicant income proof",
+        "Fee structure details",
+        "Passport & visa documents (for abroad)"
+      ],
+      features: [
+        "Collateral-free loans up to ₹50 Lakh for premier institutions",
+        "Covers tuition, accommodation, and living costs",
+        "Quick digital processing",
+        "Flexible EMI options post-moratorium",
+        "Dedicated education loan team"
+      ],
+      description: "IDFC FIRST Bank offers education loans with attractive rates and collateral-free options for students admitted to premier institutions."
+    },
+    {
+      name: "Punjab National Bank Education Loan",
+      slug: "pnb-education-loan",
+      interestRate: "8.45% – 10.45% p.a.",
+      processingFee: "Nil",
+      maxAmount: "₹1 Crore (Abroad), ₹20 Lakh (India)",
+      tenure: "Up to 15 years",
+      eligibility: [
+        "Indian national with confirmed admission",
+        "Course in India or abroad from recognized institution",
+        "Co-applicant (parent/guardian) required",
+        "Collateral for loans above ₹7.5 Lakh"
+      ],
+      documents: [
+        "Admission letter",
+        "Mark sheets of qualifying exams",
+        "KYC documents of student and co-applicant",
+        "Income proof of co-applicant",
+        "Fee structure from institution",
+        "Collateral documents if applicable"
+      ],
+      features: [
+        "No processing fee",
+        "Moratorium period: Course + 12 months",
+        "Interest subsidy for economically weaker sections",
+        "Covers all education-related expenses",
+        "0.50% concession for girl students"
+      ],
+      description: "PNB Saraswati Education Loan provides affordable education financing with generous moratorium and government subsidy benefits."
+    },
+    {
+      name: "Prodigy Finance Education Loan",
+      slug: "prodigy-finance-education-loan",
+      interestRate: "Variable (SOFR + margin)",
+      processingFee: "Included in APR",
+      maxAmount: "Up to full cost of attendance",
+      tenure: "Up to 20 years",
+      eligibility: [
+        "Must be admitted to a Prodigy Finance-supported university",
+        "No co-signer or collateral required",
+        "Available for international students from 150+ countries",
+        "Graduate and postgraduate courses only"
+      ],
+      documents: [
+        "University offer letter",
+        "Passport copy",
+        "Academic transcripts",
+        "Online application form",
+        "No income proof required from student",
+        "No collateral documents needed"
+      ],
+      features: [
+        "No co-signer or collateral required",
+        "Covers up to 100% of cost of attendance",
+        "Community-funded lending model",
+        "Available for top global MBA and Master's programs",
+        "Simple online application process"
+      ],
+      description: "Prodigy Finance is a global education loan provider specializing in no-collateral, no-cosigner loans for postgraduate students at top international universities."
+    },
+    {
+      name: "Auxilo Finserve Education Loan",
+      slug: "auxilo-education-loan",
+      interestRate: "10.25% – 14.00% p.a.",
+      processingFee: "Up to 2% + GST",
+      maxAmount: "₹75 Lakh",
+      tenure: "Up to 10 years",
+      eligibility: [
+        "Indian national with confirmed admission",
+        "Courses in India and abroad covered",
+        "Co-applicant required",
+        "Minimum academic performance criteria"
+      ],
+      documents: [
+        "Admission offer letter",
+        "Academic records",
+        "KYC of student and co-applicant",
+        "Income documents of co-applicant",
+        "Fee structure from institution",
+        "Passport (for abroad)"
+      ],
+      features: [
+        "Specializes in education financing",
+        "Customized loan structures",
+        "Covers both UG and PG programs",
+        "Quick sanction process",
+        "Dedicated support team for students"
+      ],
+      description: "Auxilo Finserve is a dedicated education finance NBFC providing tailored education loan solutions for students across India."
+    }
+  ],
+  insights: [
+    {
+      title: "How to Get an Education Loan Without Collateral",
+      slug: "education-loan-without-collateral",
+      summary: "Many banks and NBFCs offer collateral-free education loans up to ₹7.5–50 Lakh for courses at premier institutions. Learn how to qualify.",
+      keyPoints: [
+        "Government banks offer collateral-free loans up to ₹7.5 Lakh under model education loan scheme",
+        "NBFCs like HDFC Credila and Prodigy Finance offer higher collateral-free limits for top-ranked universities",
+        "Strong academic record and admission to a reputed institution increase your chances",
+        "Interest rates may be slightly higher for unsecured education loans",
+        "Consider government interest subsidy schemes like CSIS for economically weaker sections"
+      ]
+    },
+    {
+      title: "Education Loan vs Self-Funding – Which is Better?",
+      slug: "education-loan-vs-self-funding",
+      summary: "Compare the financial impact of taking an education loan versus self-funding your higher education.",
+      keyPoints: [
+        "Education loans provide tax benefits under Section 80E on interest paid",
+        "Self-funding avoids interest costs but ties up family savings",
+        "Loans help build credit history early in your career",
+        "Moratorium period gives you time to start earning before repayment",
+        "Consider opportunity cost of liquidating investments vs loan interest"
+      ]
+    },
+    {
+      title: "Top Scholarships to Reduce Education Loan Burden",
+      slug: "scholarships-reduce-loan-burden",
+      summary: "Discover major scholarships for Indian students that can significantly reduce the amount you need to borrow.",
+      keyPoints: [
+        "Government scholarships: National Overseas Scholarship, Central Sector Scholarship",
+        "University-specific merit and need-based scholarships",
+        "Country-specific scholarships: Chevening (UK), Fulbright (USA), DAAD (Germany)",
+        "Corporate scholarships from Tata, Aditya Birla, and other foundations",
+        "Apply early — most scholarships have deadlines 6-12 months before course start"
+      ]
+    },
+    {
+      title: "Section 80E Tax Benefits on Education Loans",
+      slug: "section-80e-tax-benefits",
+      summary: "Understanding how to claim tax deductions on education loan interest under Section 80E of the Income Tax Act.",
+      keyPoints: [
+        "Deduction available on entire interest paid — no upper limit",
+        "Available for 8 consecutive years from the year you start repaying",
+        "Only the person who repays the loan can claim the deduction",
+        "Applicable for loans from recognized financial institutions only",
+        "Covers loans for self, spouse, children, or student for whom you are legal guardian"
+      ]
+    },
+    {
+      title: "How to Choose the Right Education Loan Lender",
+      slug: "choose-right-education-loan-lender",
+      summary: "Key factors to compare when selecting an education loan provider for studying in India or abroad.",
+      keyPoints: [
+        "Compare interest rates — fixed vs floating and the effective APR",
+        "Check moratorium period and repayment flexibility",
+        "Evaluate collateral requirements and loan-to-value ratio",
+        "Look for zero processing fee options from government banks",
+        "Read reviews and check turnaround time for loan sanctioning"
+      ]
+    }
+  ],
+  rates: [
+    {
+      title: "SBI Education Loan Interest Rate",
+      slug: "sbi-education-loan-rate",
+      bank: "State Bank of India",
+      rate: "8.15% – 10.00% p.a.",
+      effectiveRate: "8.15% – 10.25% p.a.",
+      processingFee: "Nil",
+      prepayment: "No charges",
+      details: [
+        "Rate linked to 1-year MCLR (currently 8.15%)",
+        "0.50% concession for female students",
+        "Lower rates for loans up to ₹7.5 Lakh (no collateral needed)",
+        "Interest subsidy available under government schemes for EWS",
+        "Rate revision happens annually based on MCLR changes"
+      ]
+    },
+    {
+      title: "HDFC Credila Education Loan Interest Rate",
+      slug: "hdfc-credila-education-loan-rate",
+      bank: "HDFC Credila",
+      rate: "9.00% – 11.50% p.a.",
+      effectiveRate: "9.50% – 12.25% p.a.",
+      processingFee: "1% of loan amount",
+      prepayment: "No charges",
+      details: [
+        "Rate depends on course, university ranking, and loan amount",
+        "Premier university students get preferential rates",
+        "Fixed rate options available for budget planning",
+        "Rate locked at sanction — no surprises during repayment",
+        "Co-applicant income and credit score also influence the rate"
+      ]
+    },
+    {
+      title: "Bank of Baroda Education Loan Interest Rate",
+      slug: "bob-education-loan-rate",
+      bank: "Bank of Baroda",
+      rate: "8.30% – 9.85% p.a.",
+      effectiveRate: "8.30% – 9.85% p.a.",
+      processingFee: "Nil",
+      prepayment: "No charges",
+      details: [
+        "Among the most competitive rates in the market",
+        "0.50% concession for girl students",
+        "Linked to BRLLR (Baroda Repo Linked Lending Rate)",
+        "No hidden charges or processing fees",
+        "Additional concession for loans under Vidya Lakshmi portal"
+      ]
+    },
+    {
+      title: "Axis Bank Education Loan Interest Rate",
+      slug: "axis-bank-education-loan-rate",
+      bank: "Axis Bank",
+      rate: "9.70% – 13.70% p.a.",
+      effectiveRate: "10.00% – 14.50% p.a.",
+      processingFee: "Up to 1% + GST",
+      prepayment: "2% + GST on prepaid amount",
+      details: [
+        "Rate varies by loan amount, course, and institution ranking",
+        "Higher rates for non-premier institutions",
+        "Competitive rates for MBA programs at top B-schools",
+        "Processing fee may be negotiable for large loan amounts",
+        "EMI starts after moratorium period ends"
+      ]
+    },
+    {
+      title: "PNB Education Loan Interest Rate",
+      slug: "pnb-education-loan-rate",
+      bank: "Punjab National Bank",
+      rate: "8.45% – 10.45% p.a.",
+      effectiveRate: "8.45% – 10.45% p.a.",
+      processingFee: "Nil",
+      prepayment: "No charges",
+      details: [
+        "Linked to PNB's RLLR (Repo Linked Lending Rate)",
+        "0.50% concession for female students",
+        "No processing or prepayment fees",
+        "Competitive rates for government scheme beneficiaries",
+        "Simple interest during moratorium, EMI after"
+      ]
+    }
+  ],
+  eligibilityDocs: [
+    {
+      title: "Education Loan Eligibility Criteria",
+      slug: "education-loan-eligibility",
+      description: "General eligibility requirements for education loans in India for domestic and international studies.",
+      points: [
+        "Student must be an Indian national",
+        "Must have secured admission in a recognized institution in India or abroad",
+        "No age limit for student in most banks, but co-applicant is required",
+        "Courses covered: Graduation, Post-Graduation, Diploma, PhD, Professional courses",
+        "Good academic track record (generally 50%+ in qualifying exam)",
+        "Co-applicant should have stable income source",
+        "Collateral required for loans above ₹7.5 Lakh (varies by bank)"
+      ]
+    },
+    {
+      title: "Documents Required for Education Loan",
+      slug: "education-loan-documents",
+      description: "Comprehensive checklist of documents needed for education loan application.",
+      points: [
+        "Admission letter / Offer letter from the institution",
+        "Mark sheets of 10th, 12th, and graduation (as applicable)",
+        "Entrance exam scorecard (GRE, GMAT, IELTS, TOEFL etc.)",
+        "Cost of study / Fee structure from the institution",
+        "KYC documents: Aadhaar, PAN, Passport",
+        "Passport and Visa documents (for study abroad)",
+        "Co-applicant income proof: Salary slips, ITR, Bank statements",
+        "Collateral documents: Property papers, FD receipts (if applicable)",
+        "Passport-size photographs of student and co-applicant"
+      ]
+    },
+    {
+      title: "Courses Eligible for Education Loans",
+      slug: "eligible-courses-education-loan",
+      description: "Types of courses and programs that qualify for education loan financing from banks and NBFCs.",
+      points: [
+        "Engineering (B.Tech, M.Tech) from AICTE/UGC approved institutions",
+        "MBA/PGDM from AICTE approved business schools",
+        "Medical (MBBS, MD, MS, BDS) from MCI recognized colleges",
+        "Law (LLB, LLM) from BCI recognized institutions",
+        "Pure Sciences, Arts, Commerce — graduation and post-graduation",
+        "Professional certifications (CA, CS, CFA, CPA)",
+        "PhD and research programs in recognized universities",
+        "Study abroad programs in QS/THE ranked universities"
+      ]
+    },
+    {
+      title: "Education Loan Repayment Guide",
+      slug: "education-loan-repayment-guide",
+      description: "Understanding the repayment structure, moratorium period, and EMI options for education loans.",
+      points: [
+        "Moratorium period: Course duration + 6-12 months (varies by lender)",
+        "During moratorium, only simple interest accrues (no EMI required)",
+        "Some banks allow partial interest payments during study to reduce total cost",
+        "EMI calculation based on reducing balance method",
+        "Typical repayment tenure: 5-15 years after moratorium",
+        "Prepayment/foreclosure: Most banks allow with zero or minimal charges",
+        "Auto-debit facility available for hassle-free repayment",
+        "Missing EMIs can affect co-applicant's credit score too"
+      ]
+    }
+  ]
+};
+
 export const productSidebarDataMap: Record<string, ProductSidebarData> = {
   "Personal Loan": personalLoanData,
   "Gold Loan": goldLoanData,
@@ -964,4 +1415,5 @@ export const productSidebarDataMap: Record<string, ProductSidebarData> = {
   "Micro Loan": microLoanData,
   "Loan Against Property": loanAgainstPropertyData,
   "Credit Cards": creditCardsData,
+  "Education Loan": educationLoanData,
 };
