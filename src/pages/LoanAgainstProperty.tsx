@@ -1,5 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductSidebar from "@/components/ProductSidebar";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
 import { Home, IndianRupee, Building2, Users, ArrowRight, Shield, Zap, Clock, Percent, FileText, CheckCircle, Landmark, HandCoins, TrendingDown, Calculator, Briefcase, User, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";

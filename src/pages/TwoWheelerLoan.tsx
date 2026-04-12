@@ -1,5 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductSidebar from "@/components/ProductSidebar";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import twoWheelerHero from "@/assets/two-wheeler-loan-hero.png";

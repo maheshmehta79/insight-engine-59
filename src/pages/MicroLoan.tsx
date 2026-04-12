@@ -1,5 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductSidebar from "@/components/ProductSidebar";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
 import { FileText, IndianRupee, Users, HeartPulse, User, Coins, Briefcase, Wallet, ArrowRight, ShoppingCart, Store, Smartphone, Banknote, Clock, Zap, HandCoins, Receipt, TrendingDown, CheckCircle2, CreditCard, ShieldCheck, Percent, BadgeCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
