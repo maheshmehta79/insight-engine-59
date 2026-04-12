@@ -225,6 +225,12 @@ const BusinessLoan = () => {
         </div>
       </section>
 
+      {/* Main Content + Sidebar Layout */}
+      <div className="flex gap-8">
+        <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Business Loan" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
       {/* About Section */}
       <div ref={sectionRefs.About} className="scroll-mt-32">
         <section className="py-8">
@@ -493,6 +499,19 @@ const BusinessLoan = () => {
             ))}
           </div>
         </section>
+      </div>
+
+        <ProductSidebar
+          productName="Business Loan"
+          insights={["MSME Loan Schemes by Government", "How to Improve Business Loan Approval Chances"]}
+          topLenders={["HDFC Business Loan", "SBI Business Loan", "Bajaj Finserv Business Loan"]}
+          interestRates={["HDFC Business Loan Rate", "SBI Business Loan Rate"]}
+          eligibilityDocs={["How to Apply?", "Eligibility Criteria", "Documents Required"]}
+          ctaIcon={Briefcase}
+          ctaDescription="Compare business loan offers from 30+ lenders."
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
+        />
       </div>
 
       <Footer />
