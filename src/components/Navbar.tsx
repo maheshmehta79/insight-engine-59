@@ -11,6 +11,7 @@ const navItems = [
   { label: "Credit Cards", hasDropdown: true, icon: CreditCard, dropdownItems: [{ label: "Credit Cards", href: "/credit-cards" }] },
   { label: "Credit Score", hasDropdown: false, icon: BarChart3, href: "/credit-score" },
   { label: "Calculators", hasDropdown: false, icon: Building2, href: "/calculators" },
+  { label: "Partner Login", hasDropdown: false, icon: Briefcase, href: "/partner-gateway" },
 ];
 
 const Navbar = () => {
