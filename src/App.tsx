@@ -35,6 +35,8 @@ import StudyNetherlands from "./pages/study-abroad/StudyNetherlands.tsx";
 import StudyNewZealand from "./pages/study-abroad/StudyNewZealand.tsx";
 import StudyIreland from "./pages/study-abroad/StudyIreland.tsx";
 import StudySweden from "./pages/study-abroad/StudySweden.tsx";
+import TermsAndConditions from "./pages/TermsAndConditions.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import StudyDelhi from "./pages/study-india/StudyDelhi.tsx";
 import StudyMumbai from "./pages/study-india/StudyMumbai.tsx";
 import StudyChennai from "./pages/study-india/StudyChennai.tsx";
