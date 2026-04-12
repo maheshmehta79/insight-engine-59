@@ -25,6 +25,9 @@ import NotFound from "./pages/NotFound.tsx";
 import ProductCalculator from "./pages/ProductCalculator.tsx";
 import Login from "./pages/Login.tsx";
 import CreduAIChat from "./components/CreduAIChat";
+import CustomerDashboard from "./pages/CustomerDashboard.tsx";
+import PartnerDashboard from "./pages/PartnerDashboard.tsx";
+import PartnerGateway from "./pages/PartnerGateway.tsx";
 import StudyIndia from "./pages/study-abroad/StudyIndia.tsx";
 import StudyAustralia from "./pages/study-abroad/StudyAustralia.tsx";
 import StudyFrance from "./pages/study-abroad/StudyFrance.tsx";
@@ -91,6 +94,9 @@ const App = () => (
             <Route path="/study-abroad/sweden" element={<StudySweden />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/customer-dashboard" element={<CustomerDashboard />} />
+            <Route path="/partner-dashboard" element={<PartnerDashboard />} />
+            <Route path="/partner-gateway" element={<PartnerGateway />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
