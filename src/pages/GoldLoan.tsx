@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import ProductSidebar from "@/components/ProductSidebar";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
 import {
   Coins, Shield, Clock, Zap, FileText, IndianRupee, CheckCircle, ChevronRight,
   Building2, TrendingUp, HelpCircle, Gem, Scale, Banknote, ArrowRight, BadgePercent,
