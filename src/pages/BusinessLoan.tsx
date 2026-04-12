@@ -500,6 +500,7 @@ const BusinessLoan = () => {
           </div>
         </section>
       </div>
+        </div>
 
         <ProductSidebar
           productName="Business Loan"
