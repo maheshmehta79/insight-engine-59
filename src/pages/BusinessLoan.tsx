@@ -1,5 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductSidebar from "@/components/ProductSidebar";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import businessLoanHero from "@/assets/business-loan-hero.png";
@@ -99,6 +102,7 @@ const faqData = [
 const BusinessLoan = () => {
   const [activeTab, setActiveTab] = useState("About");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
 
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
