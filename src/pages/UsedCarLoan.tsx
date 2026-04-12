@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import ProductSidebar from "@/components/ProductSidebar";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
 import {
   Car, IndianRupee, FileText, Shield, Zap, Clock, CheckCircle, ChevronRight,
   Building2, TrendingUp, HelpCircle, Award, ArrowRight, BadgePercent,
@@ -128,6 +130,7 @@ const faqs = [
 ];
 
 const UsedCarLoan = () => {
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
     Features: useRef<HTMLDivElement>(null),
@@ -243,6 +246,9 @@ const UsedCarLoan = () => {
       <div className="flex gap-8 pb-16">
         {/* Main Content */}
         <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Used Car Loan" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
           {/* About Section */}
           <div ref={sectionRefs.About} className="scroll-mt-24 mb-10">
             <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
@@ -430,6 +436,8 @@ const UsedCarLoan = () => {
           eligibilityDocs={usedCarLoanDetails}
           ctaIcon={Car}
           ctaDescription="Compare offers from 50+ lenders and drive your dream car today."
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
         />
       </div>
 

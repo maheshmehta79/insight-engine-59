@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import ProductSidebar from "@/components/ProductSidebar";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
 import {
   Home, IndianRupee, FileText, Shield, Zap, Clock, CheckCircle, ChevronRight,
   Building2, TrendingUp, HelpCircle, Award, ArrowRight, BadgePercent,
@@ -131,6 +133,7 @@ const faqs = [
 ];
 
 const HomeLoan = () => {
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
     Features: useRef<HTMLDivElement>(null),
@@ -244,6 +247,9 @@ const HomeLoan = () => {
       <div className="flex gap-8 pb-16">
         {/* Main Content */}
         <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Home Loan" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
           {/* About Section */}
           <div ref={sectionRefs.About} className="scroll-mt-24 mb-10">
             <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
@@ -433,6 +439,8 @@ const HomeLoan = () => {
           ctaIcon={Home}
           ctaTitle="Get Best Home Loan Offer"
           ctaDescription="Compare offers from 20+ banks and get the lowest rates for your dream home."
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
         />
       </div>
 

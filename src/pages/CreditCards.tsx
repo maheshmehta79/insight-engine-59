@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import ProductSidebar from "@/components/ProductSidebar";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
 import {
   CreditCard, IndianRupee, FileText, Shield, Zap, Clock, CheckCircle, ChevronRight,
   Building2, TrendingUp, HelpCircle, Award, ArrowRight, BadgePercent,
@@ -338,6 +340,7 @@ const tagColors: Record<string, string> = {
 };
 
 const CreditCards = () => {
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
     "Top Cards": useRef<HTMLDivElement>(null),
@@ -422,6 +425,9 @@ const CreditCards = () => {
       <div className="flex gap-8 pb-16">
         {/* Main Content */}
         <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Credit Cards" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
           {/* About Section */}
           <div ref={sectionRefs.About} className="scroll-mt-24 mb-10">
             <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
@@ -734,7 +740,7 @@ const CreditCards = () => {
         </div>
 
         <ProductSidebar
-          productName="Credit Card"
+          productName="Credit Cards"
           insights={relatedArticles}
           topLenders={creditCardByBank}
           interestRates={creditCardByType}
@@ -743,6 +749,8 @@ const CreditCards = () => {
           ctaTitle="Find Your Perfect Card"
           ctaDescription="Compare credit cards from 30+ banks. Check eligibility without affecting your CIBIL score."
           ctaButtonText="Compare Cards Now"
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
         />
       </div>
 
