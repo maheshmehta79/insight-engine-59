@@ -74,6 +74,7 @@ const faqs = [
 
 const MicroLoan = () => {
   const [activeTab, setActiveTab] = useState("About");
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
 
   const aboutRef = useRef<HTMLDivElement>(null);
   const ratesRef = useRef<HTMLDivElement>(null);
