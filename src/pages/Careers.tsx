@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Briefcase, Code, Rocket, Headphones, Mail, ArrowRight } from "lucide-react";
 import careersIllustration from "@/assets/careers-illustration.png";
+import CareerApplicationModal from "@/components/CareerApplicationModal";
 
 const pillars = [
   {
