@@ -17,6 +17,7 @@ import MicroLoan from "./pages/MicroLoan.tsx";
 import GoldLoan from "./pages/GoldLoan.tsx";
 import CreditCards from "./pages/CreditCards.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
+import Careers from "./pages/Careers.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import CreditScore from "./pages/CreditScore.tsx";
 import Calculators from "./pages/Calculators.tsx";
