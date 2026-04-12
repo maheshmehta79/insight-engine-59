@@ -425,6 +425,9 @@ const CreditCards = () => {
       <div className="flex gap-8 pb-16">
         {/* Main Content */}
         <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Credit Cards" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
           {/* About Section */}
           <div ref={sectionRefs.About} className="scroll-mt-24 mb-10">
             <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
