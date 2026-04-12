@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Briefcase, Code, Rocket, Headphones, Mail, ArrowRight } from "lucide-react";
 import careersIllustration from "@/assets/careers-illustration.png";
+import CareerApplicationModal from "@/components/CareerApplicationModal";
 
 const pillars = [
   {
@@ -64,13 +65,14 @@ const Careers = () => {
               <p className="text-sm md:text-base opacity-90 mb-6 leading-relaxed max-w-lg">
                 You Create & Develop the product, Grow and Expand the reach, Support and Manage operations. Join us in shaping India's financial future.
               </p>
-              <a
-                href="mailto:careers@credupe.com"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[hsl(var(--primary-foreground))] text-[hsl(var(--primary))] font-semibold text-sm hover:opacity-90 transition-opacity"
-              >
-                <Mail className="w-4 h-4" />
-                Apply Now
-              </a>
+              <CareerApplicationModal
+                trigger={
+                  <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[hsl(var(--primary-foreground))] text-[hsl(var(--primary))] font-semibold text-sm hover:opacity-90 transition-opacity">
+                    <Mail className="w-4 h-4" />
+                    Apply Now
+                  </button>
+                }
+              />
             </div>
             <div className="flex justify-center">
               <img
@@ -139,13 +141,14 @@ const Careers = () => {
             <p className="text-primary-foreground/70 mb-2 max-w-xl mx-auto">
               For career related information please write to us with your CV and the team will get back to you based on the openings available.
             </p>
-            <a
-              href="mailto:careers@credupe.com"
-              className="inline-flex items-center gap-2 mt-6 px-8 py-3 rounded-full bg-primary-foreground text-primary font-semibold hover:opacity-90 transition-opacity"
-            >
-              <Mail className="w-4 h-4" />
-              careers@credupe.com
-            </a>
+            <CareerApplicationModal
+              trigger={
+                <button className="inline-flex items-center gap-2 mt-6 px-8 py-3 rounded-full bg-primary-foreground text-primary font-semibold hover:opacity-90 transition-opacity">
+                  <Mail className="w-4 h-4" />
+                  Apply Now — careers@credupe.com
+                </button>
+              }
+            />
           </motion.div>
         </div>
       </section>
