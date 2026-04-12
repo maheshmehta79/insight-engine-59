@@ -72,17 +72,6 @@ const BankingPartnersSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <p className="text-muted-foreground text-sm mb-2">Trusted by leading financial institutions</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Our Network of <span className="text-gradient">Premier Banking Partners</span>
-          </h2>
-        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
