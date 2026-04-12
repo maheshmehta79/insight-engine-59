@@ -340,6 +340,7 @@ const tagColors: Record<string, string> = {
 };
 
 const CreditCards = () => {
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
     "Top Cards": useRef<HTMLDivElement>(null),
@@ -736,7 +737,7 @@ const CreditCards = () => {
         </div>
 
         <ProductSidebar
-          productName="Credit Card"
+          productName="Credit Cards"
           insights={relatedArticles}
           topLenders={creditCardByBank}
           interestRates={creditCardByType}
@@ -745,6 +746,8 @@ const CreditCards = () => {
           ctaTitle="Find Your Perfect Card"
           ctaDescription="Compare credit cards from 30+ banks. Check eligibility without affecting your CIBIL score."
           ctaButtonText="Compare Cards Now"
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
         />
       </div>
 
