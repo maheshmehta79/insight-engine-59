@@ -1,8 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Target, Eye, Users, Award, TrendingUp, Shield, Heart, Zap } from "lucide-react";
-import aboutHero from "@/assets/about-us-hero.jpg";
+import { Target, Eye, Users, Award, TrendingUp, Shield, Heart, Zap, Sparkles, Building2, BarChart3, PiggyBank } from "lucide-react";
 
 const stats = [
   { value: "10M+", label: "Users Served" },
