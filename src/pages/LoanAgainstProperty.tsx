@@ -1,5 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductSidebar from "@/components/ProductSidebar";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
 import { Home, IndianRupee, Building2, Users, ArrowRight, Shield, Zap, Clock, Percent, FileText, CheckCircle, Landmark, HandCoins, TrendingDown, Calculator, Briefcase, User, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
@@ -121,6 +124,7 @@ const faqs = [
 const LoanAgainstProperty = () => {
   const [activeTab, setActiveTab] = useState("Overview");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
 
   const overviewRef = useRef<HTMLDivElement>(null);
   const ratesRef = useRef<HTMLDivElement>(null);
@@ -234,6 +238,12 @@ const LoanAgainstProperty = () => {
         </div>
       </section>
 
+      {/* Main Content + Sidebar Layout */}
+      <div className="flex gap-8">
+        <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Loan Against Property" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
       {/* Why Choose CreduPe */}
       <section className="pb-12">
         <div className="flex items-center gap-3 mb-6">
@@ -577,6 +587,21 @@ const LoanAgainstProperty = () => {
           ))}
         </div>
       </section>
+
+        </div>
+
+        <ProductSidebar
+          productName="Loan Against Property"
+          insights={["LAP vs Home Loan – Key Differences", "How to Maximize LAP Amount"]}
+          topLenders={["SBI LAP", "HDFC LAP", "Bajaj Finance LAP"]}
+          interestRates={["SBI LAP Interest Rate", "HDFC LAP Interest Rate"]}
+          eligibilityDocs={["How to Apply?", "Eligibility Criteria", "Documents Required"]}
+          ctaIcon={Building2}
+          ctaDescription="Compare LAP offers from 15+ lenders."
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
+        />
+      </div>
 
       <Footer />
     </div>

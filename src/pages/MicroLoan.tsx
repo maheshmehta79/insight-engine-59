@@ -1,5 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductSidebar from "@/components/ProductSidebar";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
 import { FileText, IndianRupee, Users, HeartPulse, User, Coins, Briefcase, Wallet, ArrowRight, ShoppingCart, Store, Smartphone, Banknote, Clock, Zap, HandCoins, Receipt, TrendingDown, CheckCircle2, CreditCard, ShieldCheck, Percent, BadgeCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
@@ -71,6 +74,7 @@ const faqs = [
 
 const MicroLoan = () => {
   const [activeTab, setActiveTab] = useState("About");
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
 
   const aboutRef = useRef<HTMLDivElement>(null);
   const ratesRef = useRef<HTMLDivElement>(null);
@@ -191,6 +195,12 @@ const MicroLoan = () => {
         </div>
       </section>
 
+      {/* Main Content + Sidebar Layout */}
+      <div className="flex gap-8">
+        <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Micro Loan" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
       {/* About Section */}
       <section ref={aboutRef} className="pb-12 scroll-mt-32">
         <div className="flex items-center gap-3 mb-6">
@@ -385,6 +395,21 @@ const MicroLoan = () => {
           ))}
         </Accordion>
       </section>
+
+        </div>
+
+        <ProductSidebar
+          productName="Micro Loan"
+          insights={["Micro Loan vs Personal Loan – Which to Choose?"]}
+          topLenders={["KreditBee Micro Loan", "MoneyTap Micro Loan", "EarlySalary Micro Loan"]}
+          interestRates={["KreditBee Interest Rate"]}
+          eligibilityDocs={["How to Apply?", "Eligibility Criteria"]}
+          ctaIcon={Banknote}
+          ctaDescription="Compare micro loan offers from 15+ digital lenders."
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
+        />
+      </div>
 
       <Footer />
     </div>

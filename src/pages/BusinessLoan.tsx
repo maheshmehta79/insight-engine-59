@@ -1,5 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductSidebar from "@/components/ProductSidebar";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import businessLoanHero from "@/assets/business-loan-hero.png";
@@ -99,6 +102,7 @@ const faqData = [
 const BusinessLoan = () => {
   const [activeTab, setActiveTab] = useState("About");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
 
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
@@ -221,6 +225,12 @@ const BusinessLoan = () => {
         </div>
       </section>
 
+      {/* Main Content + Sidebar Layout */}
+      <div className="flex gap-8">
+        <div className="flex-1 min-w-0">
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Business Loan" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
       {/* About Section */}
       <div ref={sectionRefs.About} className="scroll-mt-32">
         <section className="py-8">
@@ -489,6 +499,20 @@ const BusinessLoan = () => {
             ))}
           </div>
         </section>
+      </div>
+        </div>
+
+        <ProductSidebar
+          productName="Business Loan"
+          insights={["MSME Loan Schemes by Government", "How to Improve Business Loan Approval Chances"]}
+          topLenders={["HDFC Business Loan", "SBI Business Loan", "Bajaj Finserv Business Loan"]}
+          interestRates={["HDFC Business Loan Rate", "SBI Business Loan Rate"]}
+          eligibilityDocs={["How to Apply?", "Eligibility Criteria", "Documents Required"]}
+          ctaIcon={Briefcase}
+          ctaDescription="Compare business loan offers from 30+ lenders."
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
+        />
       </div>
 
       <Footer />

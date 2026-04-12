@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRef, useState } from "react";
+import { useSidebarContent } from "@/hooks/useSidebarContent";
+import SidebarContentPanel from "@/components/SidebarContentPanel";
 import { Link } from "react-router-dom";
 import carLoanHero from "@/assets/car-loan-hero.png";
 import ProductSidebar from "@/components/ProductSidebar";
@@ -53,6 +55,7 @@ const faqData = [
 const CarLoan = () => {
   const [activeTab, setActiveTab] = useState("Overview");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
   const sectionRefs = {
     Overview: useRef<HTMLDivElement>(null),
     "Interest Rates": useRef<HTMLDivElement>(null),
@@ -116,6 +119,9 @@ const CarLoan = () => {
         <div ref={sectionRefs.Overview} className="scroll-mt-32">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2 space-y-6">
+              <div ref={contentRef}>
+                <SidebarContentPanel productName="Car Loan" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+              </div>
               <h2 className="text-2xl font-bold text-foreground">Car Loan Interest Rates Comparison for All Banks</h2>
               <div className="overflow-x-auto rounded-xl border border-border">
                 <table className="w-full text-sm">
@@ -153,6 +159,8 @@ const CarLoan = () => {
               eligibilityDocs={["Car Loan Eligibility", "Documents Required", "How to Apply Online?", "Car Loan EMI Calculator", "Car Loan vs Used Car Loan"]}
               ctaIcon={Car}
               ctaDescription="Compare car loan offers from top banks and drive your dream car today."
+              onItemClick={handleItemClick}
+              activeSlug={selectedSlug}
             />
           </div>
         </div>
