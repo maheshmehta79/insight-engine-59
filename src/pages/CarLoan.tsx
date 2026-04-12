@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import carLoanHero from "@/assets/car-loan-hero.png";
+import ProductSidebar from "@/components/ProductSidebar";
 import { Car, IndianRupee, FileText, Calculator, HelpCircle, CheckCircle2, ChevronDown, Building2, Users, Percent, Clock, Shield } from "lucide-react";
 
 const tabs = ["Overview", "Interest Rates", "Eligibility", "How to Apply", "FAQ"];
@@ -144,20 +145,15 @@ const CarLoan = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="space-y-6">
-              <div className="rounded-xl border border-border p-5 bg-card space-y-3">
-                <h3 className="font-semibold text-foreground">Car Loan by Bank</h3>
-                {carLoanByBank.map((item) => (
-                  <button key={item} className="block text-sm text-primary hover:underline">{item}</button>
-                ))}
-              </div>
-              <div className="rounded-xl border border-border p-5 bg-card space-y-3">
-                <h3 className="font-semibold text-foreground">Car Loan Details</h3>
-                {carLoanDetails.map((item) => (
-                  <button key={item} className="block text-sm text-primary hover:underline">{item}</button>
-                ))}
-              </div>
-            </div>
+            <ProductSidebar
+              productName="Car Loan"
+              insights={carLoanDetails}
+              topLenders={carLoanByBank}
+              interestRates={carLoanByBank.map(b => `${b} Interest Rate`)}
+              eligibilityDocs={["Car Loan Eligibility", "Documents Required", "How to Apply Online?", "Car Loan EMI Calculator", "Car Loan vs Used Car Loan"]}
+              ctaIcon={Car}
+              ctaDescription="Compare car loan offers from top banks and drive your dream car today."
+            />
           </div>
         </div>
 

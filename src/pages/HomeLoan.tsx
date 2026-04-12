@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductSidebar from "@/components/ProductSidebar";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import {
@@ -147,23 +148,6 @@ const HomeLoan = () => {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-
-  const SidebarCard = ({ title, items, icon: Icon }: { title: string; items: string[]; icon: any }) => (
-    <div className="rounded-xl border border-border bg-card p-4 mb-4">
-      <div className="flex items-center gap-2 mb-3">
-        <Icon className="w-4 h-4 text-primary" />
-        <h3 className="text-sm font-bold text-foreground">{title}</h3>
-      </div>
-      <ul className="space-y-2">
-        {items.map((item, i) => (
-          <li key={i} className="flex items-center gap-2 text-xs text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-            <ChevronRight className="w-3 h-3 text-primary/60 shrink-0" />
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
 
   return (
     <div className="min-h-screen bg-background max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
@@ -440,25 +424,16 @@ const HomeLoan = () => {
           </div>
         </div>
 
-        {/* Sidebar */}
-        <aside className="hidden lg:block w-[280px] shrink-0">
-          <div className="sticky top-24">
-            <SidebarCard title="Related Articles" items={relatedArticles} icon={FileText} />
-            <SidebarCard title="Home Loan by Bank" items={homeLoanByBank} icon={Building2} />
-            <SidebarCard title="Interest Rate by Bank" items={interestRateByBank} icon={BadgePercent} />
-            <SidebarCard title="Home Loan Details" items={homeLoanDetails} icon={Home} />
-
-            {/* CTA Card */}
-            <div className="rounded-xl bg-[hsl(var(--purple-deep))] p-5 text-white">
-              <Home className="w-8 h-8 text-white/80 mb-3" />
-              <h3 className="text-sm font-bold mb-1">Get Best Home Loan Offer</h3>
-              <p className="text-xs text-white/70 mb-4">Compare offers from 20+ banks and get the lowest rates for your dream home.</p>
-              <Link to="/login" className="w-full py-2.5 rounded-lg bg-primary text-primary-foreground text-xs font-semibold hover:opacity-90 transition-opacity text-center block">
-                Apply Now
-              </Link>
-            </div>
-          </div>
-        </aside>
+        <ProductSidebar
+          productName="Home Loan"
+          insights={relatedArticles}
+          topLenders={homeLoanByBank}
+          interestRates={interestRateByBank}
+          eligibilityDocs={homeLoanDetails}
+          ctaIcon={Home}
+          ctaTitle="Get Best Home Loan Offer"
+          ctaDescription="Compare offers from 20+ banks and get the lowest rates for your dream home."
+        />
       </div>
 
       <Footer />
