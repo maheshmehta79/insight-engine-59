@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Target, Eye, Users, Award, TrendingUp, Shield, Heart, Zap, Sparkles, Building2, BarChart3, PiggyBank } from "lucide-react";
+import aboutUsIllustration from "@/assets/about-us-illustration.png";
 
 const stats = [
   { value: "10M+", label: "Users Served" },
@@ -60,9 +61,9 @@ const AboutUs = () => {
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <p className="text-[hsl(var(--lavender-light))] font-medium mb-2">Our Mission</p>
+              <p className="text-[hsl(var(--lavender-light))] font-medium mb-2">About CreduPe</p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Empowering Every Indian's <span className="text-[hsl(var(--lavender-light))]">Financial Journey</span>
+                Your Trusted Partner in <span className="text-[hsl(var(--lavender-light))]">Financial Growth</span>
               </h1>
               <p className="text-sm md:text-base opacity-90 mb-6 leading-relaxed max-w-lg">
                 From comparing loan offers across 80+ banks to checking your credit score for free — CreduPe is India's most trusted platform for loans, credit cards, and investments.
@@ -83,35 +84,13 @@ const AboutUs = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="relative w-64 h-64 md:w-72 md:h-72">
-                <div className="absolute inset-0 rounded-full bg-[hsl(var(--lavender))] opacity-20 animate-pulse" />
-                <div className="absolute inset-4 rounded-full bg-[hsl(var(--purple-mid))] opacity-30" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-[hsl(var(--primary-foreground))] rounded-2xl p-6 shadow-2xl transform rotate-3">
-                    <div className="flex items-center gap-3 mb-4">
-                      <TrendingUp className="w-8 h-8 text-[hsl(var(--primary))]" />
-                      <div>
-                        <p className="text-xs text-[hsl(var(--muted-foreground))]">Growth Rate</p>
-                        <p className="text-lg font-bold text-[hsl(var(--foreground))]">4.8★ Rated</p>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="h-2 rounded-full bg-[hsl(var(--accent))] w-full">
-                        <div className="h-2 rounded-full bg-[hsl(var(--primary))] w-4/5" />
-                      </div>
-                      <div className="flex justify-between text-[10px] text-[hsl(var(--muted-foreground))]">
-                        <span>Trust</span><span>Innovation</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute top-4 right-4 bg-[hsl(var(--primary-foreground))] rounded-xl p-3 shadow-lg transform -rotate-6">
-                  <PiggyBank className="w-6 h-6 text-[hsl(var(--primary))]" />
-                </div>
-                <div className="absolute bottom-8 left-0 bg-[hsl(var(--primary-foreground))] rounded-xl p-3 shadow-lg transform rotate-6">
-                  <BarChart3 className="w-6 h-6 text-[hsl(var(--primary))]" />
-                </div>
-              </div>
+              <img
+                src={aboutUsIllustration}
+                alt="CreduPe team empowering financial growth"
+                width={800}
+                height={600}
+                className="w-full max-w-sm md:max-w-md rounded-xl"
+              />
             </div>
           </div>
         </motion.div>

@@ -17,6 +17,7 @@ import MicroLoan from "./pages/MicroLoan.tsx";
 import GoldLoan from "./pages/GoldLoan.tsx";
 import CreditCards from "./pages/CreditCards.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
+import Careers from "./pages/Careers.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import CreditScore from "./pages/CreditScore.tsx";
 import Calculators from "./pages/Calculators.tsx";
@@ -65,6 +66,7 @@ const App = () => (
             <Route path="/gold-loan" element={<GoldLoan />} />
             <Route path="/credit-cards" element={<CreditCards />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/careers" element={<Careers />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/credit-score" element={<CreditScore />} />
             <Route path="/calculators" element={<Calculators />} />
