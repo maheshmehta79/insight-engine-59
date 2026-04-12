@@ -124,6 +124,7 @@ const faqs = [
 const LoanAgainstProperty = () => {
   const [activeTab, setActiveTab] = useState("Overview");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
 
   const overviewRef = useRef<HTMLDivElement>(null);
   const ratesRef = useRef<HTMLDivElement>(null);

@@ -82,6 +82,7 @@ const faqData = [
 const TwoWheelerLoan = () => {
   const [activeTab, setActiveTab] = useState("About");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
 
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
