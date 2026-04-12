@@ -132,6 +132,7 @@ const faqs = [
 ];
 
 const PersonalLoan = () => {
+  const { selectedSlug, selectedType, handleItemClick, handleClose, contentRef } = useSidebarContent();
   const sectionRefs = {
     About: useRef<HTMLDivElement>(null),
     Features: useRef<HTMLDivElement>(null),
@@ -245,6 +246,10 @@ const PersonalLoan = () => {
       <div className="flex gap-8 pb-16">
         {/* Main Content */}
         <div className="flex-1 min-w-0">
+          {/* Dynamic Sidebar Content */}
+          <div ref={contentRef}>
+            <SidebarContentPanel productName="Personal Loan" selectedSlug={selectedSlug} selectedType={selectedType} onClose={handleClose} />
+          </div>
           {/* About Section */}
           <div ref={sectionRefs.About} className="scroll-mt-24 mb-10">
             <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
@@ -431,6 +436,8 @@ const PersonalLoan = () => {
           eligibilityDocs={personalLoanDetails}
           ctaIcon={User}
           ctaDescription="Compare offers from 80+ lenders and get the best rates instantly."
+          onItemClick={handleItemClick}
+          activeSlug={selectedSlug}
         />
       </div>
 
