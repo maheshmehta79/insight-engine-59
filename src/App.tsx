@@ -89,6 +89,8 @@ const App = () => (
             <Route path="/study-abroad/new-zealand" element={<StudyNewZealand />} />
             <Route path="/study-abroad/ireland" element={<StudyIreland />} />
             <Route path="/study-abroad/sweden" element={<StudySweden />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
