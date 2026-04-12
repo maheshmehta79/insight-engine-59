@@ -16,6 +16,13 @@ const Index = () => {
     <div className="min-h-screen bg-background max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 [&>section]:py-10 [&>section]:md:py-14">
       <Navbar />
       <HeroSection />
+      <CreditScoreSection />
+      <DigitalBankingSection />
+      <ProductCardsSection />
+      <CreditCardBanner />
+      <BecomePartner />
+      <EMICalculator />
+      <WallOfWin />
       <section className="text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground">
           Our Integrated <span className="text-primary">Banking Ecosystem</span>
@@ -24,13 +31,6 @@ const Index = () => {
           A unified platform connecting customers, partners, and financial institutions for seamless lending and credit solutions.
         </p>
       </section>
-      <CreditScoreSection />
-      <DigitalBankingSection />
-      <ProductCardsSection />
-      <CreditCardBanner />
-      <BecomePartner />
-      <EMICalculator />
-      <WallOfWin />
       <BankingPartnersSection />
       <StatsSection />
       <Footer />
